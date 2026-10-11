@@ -1,0 +1,6 @@
+{
+  "name": "VoltShift: Autonomous Grid Load-Shifting Agent",
+  "description": "Autonomous energy-systems AI agent orchestrating industrial AI compute and commercial EV fleet charging across ISOs to minimize grid carbon intensity.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
