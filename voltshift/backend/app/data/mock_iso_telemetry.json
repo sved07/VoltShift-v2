@@ -1,0 +1,138 @@
+{
+  "zones": {
+    "CAISO": {
+      "name": "California ISO",
+      "coordinates": [36.7783, -119.4179],
+      "base_carbon": 140.0,
+      "solar_peak_hour": 13,
+      "solar_max_mw": 16500,
+      "wind_peak_hour": 22,
+      "wind_max_mw": 5200,
+      "fossil_base_mw": 9800,
+      "peaker_spike_addition": 260.0
+    },
+    "ERCOT": {
+      "name": "Electric Reliability Council of Texas",
+      "coordinates": [31.0545, -97.5635],
+      "base_carbon": 220.0,
+      "solar_peak_hour": 14,
+      "solar_max_mw": 19200,
+      "wind_peak_hour": 2,
+      "wind_max_mw": 26400,
+      "fossil_base_mw": 32000,
+      "peaker_spike_addition": 320.0
+    },
+    "PJM": {
+      "name": "PJM Interconnection",
+      "coordinates": [39.9526, -75.1652],
+      "base_carbon": 340.0,
+      "solar_peak_hour": 12,
+      "solar_max_mw": 8400,
+      "wind_peak_hour": 20,
+      "wind_max_mw": 9100,
+      "fossil_base_mw": 48000,
+      "peaker_spike_addition": 280.0
+    },
+    "MISO": {
+      "name": "Midcontinent ISO",
+      "coordinates": [41.8781, -87.6298],
+      "base_carbon": 380.0,
+      "solar_peak_hour": 13,
+      "solar_max_mw": 7200,
+      "wind_peak_hour": 23,
+      "wind_max_mw": 24800,
+      "fossil_base_mw": 42000,
+      "peaker_spike_addition": 290.0
+    }
+  },
+  "workloads": [
+    {
+      "id": "ai-train-austin",
+      "site_name": "Austin Hyperscale AI Training Cluster",
+      "type": "AI_TRAINING",
+      "zone_id": "ERCOT",
+      "max_kw": 2500.0,
+      "baseline_kw": 1800.0,
+      "flexibility_score": 0.85,
+      "deadline_hour": 20,
+      "coordinates": [30.2672, -97.7431]
+    },
+    {
+      "id": "ev-fleet-dallas",
+      "site_name": "Dallas Metro Last-Mile EV Delivery Depot",
+      "type": "EV_FLEET",
+      "zone_id": "ERCOT",
+      "max_kw": 1200.0,
+      "baseline_kw": 800.0,
+      "flexibility_score": 0.90,
+      "deadline_hour": 6,
+      "coordinates": [32.7767, -96.7970]
+    },
+    {
+      "id": "ai-train-sv",
+      "site_name": "Silicon Valley LLM Fine-Tuning Pod",
+      "type": "AI_TRAINING",
+      "zone_id": "CAISO",
+      "max_kw": 1800.0,
+      "baseline_kw": 1400.0,
+      "flexibility_score": 0.75,
+      "deadline_hour": 22,
+      "coordinates": [37.3861, -122.0839]
+    },
+    {
+      "id": "ev-fleet-la",
+      "site_name": "Port of Los Angeles Drayage Electric Fleet",
+      "type": "EV_FLEET",
+      "zone_id": "CAISO",
+      "max_kw": 2200.0,
+      "baseline_kw": 1500.0,
+      "flexibility_score": 0.95,
+      "deadline_hour": 8,
+      "coordinates": [33.7432, -118.2673]
+    },
+    {
+      "id": "ai-train-columbus",
+      "site_name": "Columbus Ohio Data Fabric Supercluster",
+      "type": "AI_TRAINING",
+      "zone_id": "PJM",
+      "max_kw": 3000.0,
+      "baseline_kw": 2400.0,
+      "flexibility_score": 0.60,
+      "deadline_hour": 18,
+      "coordinates": [39.9612, -82.9988]
+    },
+    {
+      "id": "ev-fleet-norfolk",
+      "site_name": "Mid-Atlantic Freight Commercial Depot",
+      "type": "EV_FLEET",
+      "zone_id": "PJM",
+      "max_kw": 1600.0,
+      "baseline_kw": 1100.0,
+      "flexibility_score": 0.70,
+      "deadline_hour": 7,
+      "coordinates": [36.8508, -76.2859]
+    },
+    {
+      "id": "ai-train-chicago",
+      "site_name": "Chicago Great Lakes Frontier Model Node",
+      "type": "AI_TRAINING",
+      "zone_id": "MISO",
+      "max_kw": 2000.0,
+      "baseline_kw": 1600.0,
+      "flexibility_score": 0.80,
+      "deadline_hour": 21,
+      "coordinates": [41.8781, -87.6298]
+    },
+    {
+      "id": "ev-fleet-twincities",
+      "site_name": "Minneapolis Regional Transit Logistics Hub",
+      "type": "EV_FLEET",
+      "zone_id": "MISO",
+      "max_kw": 1400.0,
+      "baseline_kw": 950.0,
+      "flexibility_score": 0.88,
+      "deadline_hour": 5,
+      "coordinates": [44.9778, -93.2650]
+    }
+  ]
+}
